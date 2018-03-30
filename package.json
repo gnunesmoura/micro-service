@@ -1,0 +1,21 @@
+{
+  "name": "sqs-micro-service",
+  "version": "1.0.0-beta",
+  "description": "An integration module to generic queues like rabbitmq or aws sqs, making easy transform promises to micro-services. ",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha -r"
+  },
+  "keywords": [
+    "Integration",
+    "Queues",
+    "AWS",
+    "SQS"
+  ],
+  "author": "Gustavo Nunes de Moura <gnunes.moura[at]gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.5"
+  }
+}
