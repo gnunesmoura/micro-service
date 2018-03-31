@@ -4,7 +4,7 @@
   "description": "An integration module to generic queues like rabbitmq or aws sqs, making easy transform promises to micro-services. ",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha -r"
+    "test": "mocha --recursive"
   },
   "keywords": [
     "Integration",
