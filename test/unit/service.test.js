@@ -20,7 +20,7 @@ describe('service', () => {
         .then(response => {
           expect(response).to.be.equal(undefined)
         })
-        .then(response => service2())
+        .then(() => service2())
         .then(response => {
           expect(response).to.be.equal('input')
         })
@@ -28,7 +28,7 @@ describe('service', () => {
         .catch(done)
     })
 
-  it('a service shoud work with inputChanel returning a basic type or a Promise',
+  it('a service shoud work with inputChanel returning a basic type, object or a Promise',
     done => {
       const inputFunction = () => 'input'
       const inputPromise = () => new Promise((resolve, reject) => resolve('input'))
@@ -70,13 +70,14 @@ describe('service', () => {
         .addTask(returnUndefined)
         .build()
 
+      
       service1()
         .then(response => {
           expect(response).to.be.equal('task output')
         })
-        .then(response => service2())
+        .then(() => service2())
         .then(response => {
-          expect(response).to.be.equal('tas')
+          expect(response).to.be.equal(undefined)
         })
         .then(done)
         .catch(done)
