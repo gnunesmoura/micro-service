@@ -7,10 +7,10 @@
     "test": "mocha --recursive"
   },
   "keywords": [
-    "Integration",
-    "Queues",
-    "AWS",
-    "SQS"
+    "integration",
+    "queues",
+    "micro-service",
+    "builder"
   ],
   "author": "Gustavo Nunes de Moura <gnunes.moura[at]gmail.com>",
   "license": "MIT",
