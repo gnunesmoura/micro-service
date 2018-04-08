@@ -16,7 +16,6 @@ describe('build', () => {
   })
 
   it('the second function that it returns shoud return a promise', () => {
-    console.log(typeof serv())
     expect(typeof serv()).to.be.equal('object')
   })
 })
