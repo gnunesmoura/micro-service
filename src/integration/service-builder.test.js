@@ -2,7 +2,7 @@ const expect = require('chai').expect
 
 const serviceBuilder = require('./service-builder')
 
-describe('serviceBuilder', () => {
+describe('service builder', () => {
   it('shoud return a builder with addInputChanel that returns the builder', () => {
     const builder = serviceBuilder()
     expect(builder.addInputChanel()).to.be.equal(builder)
@@ -23,9 +23,12 @@ describe('serviceBuilder', () => {
     expect(typeof builder.build).to.be.equal('function')
   })
 
-  it('build shoud return a function that returns a promise', () => {
+  it('build shoud return a function that returns a promise', done => {
     const service = serviceBuilder().build()
     expect(typeof service).to.be.equal('function')
 
+    service()
+      .then(done)
+      .catch(done)
   })
 })
